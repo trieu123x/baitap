@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="bg-black">
+    <div class="p-4 w-[750px] h-[480px] bg-white drop-shadow-lg rounded-md">
+      <div class="flex place-content-between">
+        <span class="font-semibold text-gray-500">Friend request</span>
+        <span class="cursor-pointer font-semibold text-gray-500">...</span>
+      </div>
+      <div class="space-x-2 flex flex-row">
+        <div class="flex-col justify-items-center border-[1.5px] border-gray-200 rounded-md bg-white drop-shadow-xl mt-4 w-[170px] h-[320px] ">
+          <div class=" rounded-md  h-[170px] ">
+            <img class="h-[160px] rounded-t-md object-contain" src="https://csfood.vn/wp-content/uploads/2021/05/Banh-Choco-Pie-Lotte-Hop-336g-1.png" alt="">
+          </div>
+          <div class="  w-[130px] ">
+            <span class="font-semibold">Chocopie</span>
+          </div>
+          <div class="w-[130px] mt-4 flex-col space-y-2">
+            <button class="cursor-pointer hover:opacity-90 rounded-md  w-[130px] h-[40px] font-semibold bg-blue-200 text-blue-600">Confirm</button>
+            <button class="cursor-pointer hover:opacity-90 rounded-md  w-[130px] h-[40px] font-semibold bg-gray-200 ">Delete</button>
+          </div>
+        </div>
+        <div class="flex-col justify-items-center border-[1.5px] border-gray-200 rounded-md bg-white drop-shadow-xl mt-4 w-[170px] h-[320px] ">
+          <div class=" rounded-md  h-[170px] ">
+            <img class="h-[160px] rounded-t-md object-contain" src="https://csfood.vn/wp-content/uploads/2021/05/Banh-Choco-Pie-Lotte-Hop-336g-1.png" alt="">
+          </div>
+          <div class="  w-[130px] ">
+            <span class="font-semibold">Chocopie</span>
+          </div>
+          <div class="w-[130px] mt-4 flex-col space-y-2">
+            <button class="cursor-pointer hover:opacity-90 rounded-md  w-[130px] h-[40px] font-semibold bg-blue-200 text-blue-600">Confirm</button>
+            <button class="cursor-pointer hover:opacity-90 rounded-md  w-[130px] h-[40px] font-semibold bg-gray-200 ">Delete</button>
+          </div>
+        </div>
+        <div class="flex-col justify-items-center border-[1.5px] border-gray-200 rounded-md bg-white drop-shadow-xl mt-4 w-[170px] h-[320px] ">
+          <div class=" rounded-md  h-[170px] ">
+            <img class="h-[160px] rounded-t-md object-contain" src="https://csfood.vn/wp-content/uploads/2021/05/Banh-Choco-Pie-Lotte-Hop-336g-1.png" alt="">
+          </div>
+          <div class="  w-[130px] ">
+            <span class="font-semibold">Chocopie</span>
+          </div>
+          <div class="w-[130px] mt-4 flex-col space-y-2">
+            <button class="cursor-pointer hover:opacity-90 rounded-md  w-[130px] h-[40px] font-semibold bg-blue-200 text-blue-600">Confirm</button>
+            <button class="cursor-pointer hover:opacity-90 rounded-md  w-[130px] h-[40px] font-semibold bg-gray-200 ">Delete</button>
+          </div>
+        </div>
+        <div class="flex-col justify-items-center border-[1.5px] border-gray-200 rounded-md bg-white drop-shadow-xl mt-4 w-[170px] h-[320px] ">
+          <div class=" rounded-md  h-[170px] ">
+            <img class="h-[160px] rounded-t-md object-contain" src="https://csfood.vn/wp-content/uploads/2021/05/Banh-Choco-Pie-Lotte-Hop-336g-1.png" alt="">
+          </div>
+          <div class="  w-[130px] ">
+            <span class="font-semibold">Chocopie</span>
+          </div>
+          <div class="w-[130px] mt-4 flex-col space-y-2">
+            <button class="cursor-pointer hover:opacity-90 rounded-md  w-[130px] h-[40px] font-semibold bg-blue-200 text-blue-600">Confirm</button>
+            <button class="cursor-pointer hover:opacity-90 rounded-md  w-[130px] h-[40px] font-semibold bg-gray-200 ">Delete</button>
+          </div>
+        </div>
+      </div>
+      <button  class="btn hover:bg-gray-100 cursor-pointer text-blue-500 font-semibold h-[44px] mt-3 drop-shadow-lg rounded-md ml-0.5 w-[700px] bg-white" >See all</button>
+    </div>
+    <script>
+      const x = document.querySelectorAll("button.bg-blue-200")
+      x.forEach(button =>{
+        button.addEventListener("click",function(){
+          this.innerHTML = "Accpeted"
+          this.classList.add("opacity-50")
+        })
+      })
+      const y = document.querySelectorAll("button.bg-gray-200")
+      y.forEach(a =>{
+        a.addEventListener("click",function(){
+          this.closest("button.bg-gray-200").remove();
+        })
+      })
+    </script>
+  </body>
+</html>
