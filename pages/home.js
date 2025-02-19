@@ -53,16 +53,16 @@ function Video1() {
             </div>
         </a>
     `;
-  const linh = window.location.pathname;
-  document.getElementById(
-    "info"
-  ).innerText = `Bạn đang xem video có id là ${linh}`;
-  document.getElementById("copyButton").addEventListener("click", () => {
-    navigator.clipboard.writeText(linh).then(() => {
-      alert("Đã copy id: " + linh);
-    });
-  });
-}
+  setTimeout(() => {
+      const linh = window.location.pathname;
+      document.getElementById("info").innerText = `Bạn đang xem video có id là ${linh}`;
+      document.getElementById("copyButton").addEventListener("click", () => {
+        navigator.clipboard.writeText(linh).then(() => {
+          alert("Đã copy id: " + linh);
+        });
+      });
+    }, 0);
+  }
 
 function Video2() {
     document.querySelector("#abb").innerHTML = `
