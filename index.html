@@ -7,97 +7,31 @@
     <title>Vite App</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css">
+    
+    <script type="module" src="./main.js"></script>
 </head>
-<body class="flex font-semibold ">
-    <div class="flex flex-col space-y-2 m-4">
-        <div class=" rounded-2xl ml-4 drop-shadow-xl p-3 bg-white h-auto w-[800px]">
-            <div class="flex flex-row place-content-between">
-                <p>1. Quan trọng hay không không quan trọng quan trọng là có quan trọng hay không</p>
-                <button class="duration-300 ease-in transition-transform cursor-pointer rotate-90">v</button>
-            </div>
-            <div class="helo  max-h-0 overflow-hidden opacity-0 transition-all duration-500  -translate-y-5">
-                <p class="p-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi unde incidunt explicabo velit ad sequi quos, totam quae sapiente aspernatur fuga eos nam nemo laboriosam iure molestiae commodi qui est?</p>
-            </div>
+<body id="home" class="  ">
+    <div class="p-4 space-x-6 flex flex-row w-screen h-[60px]">
+        <h1 class="rotate-90" >|||</h1>
+        <a class="text-2xl font-semibold" href="/" data-navigo> Youtobe</a>
+    </div>
+    <div id="abb" class="flex flex-row">
+        <div class="border-r text-lg p-8 h-screen flex flex-col space-y-4 w-[300px] ">
+            <a href="/" data-navigo> Home</a>
+            <a href="/short" data-navigo>Short</a>
+            <a href="/sub" data-navigo>Kenh Dang Ky</a>
         </div>
-        <div class=" rounded-2xl ml-4 drop-shadow-xl p-3 bg-white h-auto w-[800px]">
-            <div class="flex flex-row place-content-between">
-                <p>2. Quan trọng hay không không quan trọng quan trọng là có quan trọng hay không</p>
-                <button class="duration-300 ease-in transition-transform cursor-pointer rotate-90">v</button>
-            </div>
-            <div class="helo  max-h-0 overflow-hidden opacity-0 transition-all duration-500  -translate-y-5">
-                <p class="p-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi unde incidunt explicabo velit ad sequi quos, totam quae sapiente aspernatur fuga eos nam nemo laboriosam iure molestiae commodi qui est?</p>
-            </div>
-        </div>
-        <div class=" rounded-2xl ml-4 drop-shadow-xl p-3 bg-white h-auto w-[800px]">
-            <div class="flex flex-row place-content-between">
-                <p>3. Quan trọng hay không không quan trọng quan trọng là có quan trọng hay không</p>
-                <button class="duration-300 ease-in transition-transform cursor-pointer rotate-90">v</button>
-            </div>
-            <div class="helo  max-h-0 overflow-hidden opacity-0 transition-all duration-500  -translate-y-5">
-                <p class="p-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi unde incidunt explicabo velit ad sequi quos, totam quae sapiente aspernatur fuga eos nam nemo laboriosam iure molestiae commodi qui est?</p>
+        <div class="content">
+            <div id="app" class="mt-8 ml-4">
+                <a href="/video1" data-navigo>
+                    <div class="flex flex-row space-x-4">
+                        <img class="rounded-lg w-[350px] h-[200px]" src="https://i.ytimg.com/vi/iLafAVSleFI/maxresdefault.jpg" alt="">
+                        <p class="text-2xl">Yêu em nhưng không với tới - Bùi Vĩnh Phúc-QA</p>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
-    <button class="m-4 rounded-full w-[60px] h-[60px] bg-white text-green-500 drop-shadow-2xl duration-300 ease-in transition-transform cursor-pointer ml-8 text-3xl btn">+</button>
-    <div class="homo duration-500 fixed inset-0 bg-black opacity-0 pointer-events-none"></div>
-    <div class="home flex flex-col duration-500  opacity-0 -translate-x-full bg-white drop-shadow-2xl fixed h-screen w-[300px]">
-        <img class="m-6 rounded-full w-[80px] h-[80px] object-cover" src="https://anhnail.com/wp-content/uploads/2024/11/Hinh-gai-xinh-2k4.jpg" alt="">
-        <div class="nut cursor-pointer flex items-center h-[60px] w-full  ">
-            <p class="ml-8">Home</p>
-        </div>
-        <div class="nut cursor-pointer flex items-center h-[60px] w-full  ">
-            <p class="ml-8">Đào tạo</p>
-        </div>
-        <div class="nut cursor-pointer flex items-center h-[60px] w-full  ">
-            <p class="ml-8">Hoạt động</p>
-        </div>
-        <div class="nut cursor-pointer flex items-center h-[60px] w-full  ">
-            <p class="ml-8">Thành viên</p>
-        </div>
-    </div>
-    <script>
-    document.querySelectorAll(".rotate-90").forEach((button, index) => {
-    button.addEventListener("click", function() {
-            const vb = document.querySelectorAll(".helo")[index]
-            if (this.classList.contains("rotate-90")) {
-                vb.style.maxHeight = vb.scrollHeight + "px"
-                this.classList.remove("rotate-90")
-                vb.classList.remove("opacity-0", "-translate-y-5")
-                vb.classList.add("opacity-100", "translate-y-0")
-                } else {
-                vb.style.maxHeight = "0px"          
-                this.classList.add("rotate-90")
-                vb.classList.remove("opacity-100", "translate-y-0")
-                vb.classList.add("opacity-0", "-translate-y-5")
-                }
-            });
-        });
 
-        document.querySelector(".btn").addEventListener("click",function(){
-            const x = document.querySelector(".homo")
-            const y = document.querySelector(".home")
-            if(this.classList.contains("rotate-45"))
-            {
-                this.classList.remove("rotate-45","text-red-500")
-                y.classList.remove("translate-x-0", "opacity-100");
-                y.classList.add("-translate-x-full", "opacity-0");
-                x.classList.remove("opacity-40")
-            } else{
-                this.classList.add("rotate-45","text-red-500")
-                y.classList.remove("-translate-x-full", "opacity-0");
-                y.classList.add("translate-x-0", "opacity-100");
-                x.classList.add("opacity-40")
-            }
-        })
-        document.querySelectorAll(".nut").forEach((x) =>{
-            x.addEventListener("click", function(){
-                document.querySelectorAll(".nut").forEach((btn) => {
-                btn.classList.remove("text-green-500", "bg-green-100");
-                btn.classList.add("text-black");
-            });
-                x.classList.add("text-green-500", "bg-green-100")
-            })
-        })
-    </script>
 </body>
 </html>
